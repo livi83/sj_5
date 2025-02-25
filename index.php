@@ -35,6 +35,8 @@
         foreach($data as $name => $age){
             echo "$name má $age rokov <br>";
         }
+
+        // komentár
     ?>
 </body>
 </html>
