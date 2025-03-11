@@ -1,6 +1,8 @@
 <?php
   include('partials/header.php');
 ?>
+
+
 <main>
   <section class="banner">
     <div class="container text-white">
