@@ -14,14 +14,14 @@
   <div class="col-25">
     <h4>Rýchle odkazy</h4>
     <ul class="footer-menu">
-      <?php
-          $pages = array('Domov'=>'index.php',
-          'Portfólio'=>'portfolio.php',
-          'Q&A'=>'qna.php',
-          'Kontakt'=>'kontakt.php'  
-          );
-          echo(get_menu($pages));
-      ?>  
+    <?php
+      $pages = array('Domov'=>'index.php',
+      'Portfólio'=>'portfolio.php',
+      'Q&A'=>'qna.php',
+      'Kontakt'=>'kontakt.php'  
+      );
+      echo(get_menu($pages));
+    ?>  
     </ul>
   </div>
   <div class="col-25">
