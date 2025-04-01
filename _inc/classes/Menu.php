@@ -16,7 +16,7 @@ class Menu{
         }
         
         // Uloženie položiek menu
-        $this->menuItems;
+        $this->menuItems = $menuItems;
         
     }
 

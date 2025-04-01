@@ -1,6 +1,5 @@
 <?php
   include('partials/header.php');
-  include('_inc/classes/Qna.php');
 ?>
 <main>
   <section class="banner">
