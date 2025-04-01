@@ -1,5 +1,6 @@
 <?php
   include('partials/header.php');
+  include('_inc/classes/Qna.php');
 ?>
 <main>
   <section class="banner">
@@ -15,7 +16,19 @@
     </div>
   </section>
     <section class="container">
-    <div class="accordion">
+      <?php
+        $qna = new Qna();
+        $qnaItems = $qna->index();
+        //print_r($qnaItems);
+        foreach ($qnaItems as $item) {
+          //print_r($item);
+          echo '<div class="accordion">';
+          echo '<div class="question">' . $item['question'] . '</div>';
+          echo '<div class="answer">' . $item['answer'] . '</div>';
+          echo '</div>';
+        }
+      ?>
+    <!--<div class="accordion">
       <div class="question">Otázka 1</div>
       <div class="answer">Odpoveď 1</div>
     </div>
@@ -26,7 +39,7 @@
     <div class="accordion">
       <div class="question">Otázka 3</div>
       <div class="answer">Odpoveď 3</div>
-    </div>
+    </div>-->
   </section>
   </section>
 </div>
