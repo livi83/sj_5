@@ -1,5 +1,17 @@
 <?php
 include('partials/header.php');
+
+$db = new Database();
+$contact = new Contact($db);
+$contacts = $contact->index();
+//print_r($contacts);
+
+// Vymazanie správy
+if (isset($_GET['delete'])) {
+    $contact->destroy($_GET['delete']);
+    header("Location: admin.php");
+    exit;
+}
 ?>
 
 <section class="container">
@@ -7,7 +19,7 @@ include('partials/header.php');
 
     <h2>Kontakty</h2>
 
-    <table border=>
+    <table border="1">
         
         <tr>
             <th>ID</th>
@@ -16,7 +28,20 @@ include('partials/header.php');
             <th>Sprava</th>            
             <th>Akcia</th>
         </tr>
-
+        <?php
+            foreach($contacts as $con){
+               echo '<tr>';
+               //sem vkladame obsah
+               echo '<td>'.$con['id'].'</td>';
+               echo '<td>'.$con['name'].'</td>';
+               echo '<td>'.$con['email'].'</td>';
+               echo '<td>'.$con['message'].'</td>';
+               //echo '<td> DELETE </td>';
+               echo '<td><a href="?delete='.$con['id'].'" 
+            onclick="return confirm(\'Určite chcete vymazať túto správu?\')">Delete</a></td>';
+               echo '</tr>';
+            }
+        ?>
 
     </table>
 
