@@ -1,5 +1,6 @@
 <?php
 require_once('_inc/autoload.php');
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,18 +45,18 @@ require_once('_inc/autoload.php');
         </a>
       </nav>
     </header>
-
     <?php
-    /*
-     $db = new Database();
-     $connection = $db->getConnection();
-     if($connection){
-      echo'Máme spojenie';
-     }
-      */
-      /*
-      $db = new Database();
-      $contact = new Contact($db);
-      var_dump($contact->index());
-      */
+    
+    /*$db = new Database();
+    $conn = $db->getConnection();
+    if($conn){
+      echo 'Máme spojenie<br>';
+      var_dump($conn);
+    }*/
+
+    /*$db = new Database();
+    $contact = new Contact($db);
+    $contacts = $contact->index();
+    var_dump($contacts);*/
     ?>
+   
